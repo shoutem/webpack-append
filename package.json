@@ -1,14 +1,16 @@
 {
-  "name": "webpack-append",
-  "version": "0.1.2",
-  "description": "Simple loader to append text to files (useful for adding file headers)",
+  "name": "@shoutem/webpack-prepend-append",
+  "version": "1.0.0",
+  "description": "Simple loader to append/prepend text to files (useful for adding file headers)",
   "keywords": [
     "webpack",
     "loader",
     "webpack-loader",
     "append",
+    "prepend",
     "string-append",
-    "header"
+    "header",
+    "footer"
   ],
   "scripts": {
     "test": "mocha"
@@ -19,16 +21,13 @@
   "peerDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/dumconstantin/webpack-append"
+    "url": "https://github.com/shoutem/webpack-prepend-append"
   },
-  "homepage": "https://github.com/dumconstantin/webpack-append",
-  "authors": [
-    "Constantin Dumitrescu <dum.constantin@gmail.com> (https://github.com/dumconstantin)"
-  ],
+  "homepage": "https://github.com/shoutem/webpack-prepend-append",
   "license": "MIT",
   "private": false,
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/dumconstantin/webpack-append/issues"
+    "url": "https://github.com/shoutem/webpack-prepend-append/issues"
   }
 }

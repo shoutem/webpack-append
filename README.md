@@ -1,14 +1,11 @@
-# [Webpack](http://webpack.github.io/) loader to append text to files
+# [Webpack](http://webpack.github.io/) loader to prepend/append text to files
 
-Append a header to the contents loaded by the loader. Useful to add headers to all your files in the webpack pipeline.
-
-*Motivation*: I wanted to use Ramda functions directly in my application without import every single one causing a huge bloat in my import statements.
-I also didn't want to keep using the "R." prefix.
+Prepend/append text to the contents loaded by the loader. Useful to add headers, footers or to wrap all your files in the webpack pipeline.
 
 ## Install:
 
 ```bash
-$ npm install --save-dev webpack-append
+$ npm install --save-dev @shoutem/webpack-prepend-append
 ```
 
 ## Usage:
@@ -23,20 +20,18 @@ module.exports = {
         // ...
         {
           test: /\.js$/,
-          loader: 'webpack-append',
-          query: 'console.log(\'This header sits perfectly at the begining of my file.!\')'
+          loader: 'webpack-prepend-append',
+          query: {
+            prepend: 'Header text',
+            append; 'Footer text'
+          }
         }
       ]
     }
 }
 ```
 
-## My use case:
-
 ```javascript
-import R from 'ramda'
-const importAllRamdaFunctions = 'import { ' + Object.keys(R).join(', ') + ' } from \'ramda\''
-
 module.exports = {
     // ...
     module: {
@@ -44,17 +39,16 @@ module.exports = {
         // ...
         {
           test: /\.js$/,
-          loader: 'webpack-append',
-          query: importAllRamdaFunctions
+          loader: 'webpack-prepend-append',
+          query: {
+            prepend: 'WrapItIntoBlock {',
+            append; '}'
+          }
         }
       ]
     }
 }
 ```
-
-## Contributing:
-
-Feel free to open issues to propose stuff and participate. Pull requests are also welcome.
 
 ## Licence:
 
