@@ -1,6 +1,6 @@
 {
   "name": "@shoutem/webpack-prepend-append",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple loader to append/prepend text to files (useful for adding file headers)",
   "keywords": [
     "webpack",

@@ -20,7 +20,7 @@ module.exports = {
         // ...
         {
           test: /\.js$/,
-          loader: 'webpack-prepend-append',
+          loader: '@shoutem/webpack-prepend-append',
           query: {
             prepend: 'Header text',
             append; 'Footer text'
@@ -39,7 +39,7 @@ module.exports = {
         // ...
         {
           test: /\.js$/,
-          loader: 'webpack-prepend-append',
+          loader: '@shoutem/webpack-prepend-append',
           query: {
             prepend: 'WrapItIntoBlock {',
             append; '}'
